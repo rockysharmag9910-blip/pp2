@@ -1,15 +1,15 @@
 {
   "short_name": "PixelPerfect",
-  "name": "Pixel Perfect History",
+  "name": "Pixel Perfect Transaction History",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968313.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/10149/10149458.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
-  "start_url": "./History.html",
+  "start_url": "./index.html",
   "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
