@@ -1,9 +1,9 @@
 {
-  "short_name": "PixelPerfect",
-  "name": "Pixel Perfect Transaction History",
+  "short_name": "PixelHistory",
+  "name": "Pixel Perfect History",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/10149/10149458.png",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_Pay_Logo.svg/512px-Google_Pay_Logo.svg.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
