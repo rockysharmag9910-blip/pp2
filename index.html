@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Transaction History - Pixel Perfect</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -50,7 +57,6 @@
             flex-direction: column;
         }
 
-        /* HEADER SYSTEM */
         .fixed-header-container {
             position: fixed;
             top: 0;
@@ -109,7 +115,6 @@
             font-weight: 600;
         }
 
-        /* SEARCH BAR SYSTEM */
         .search-outer-wrapper {
             padding-bottom: 16px;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -149,7 +154,6 @@
             background: #333;
         }
 
-        /* CONTENT AREA */
         .main-content {
             flex: 1;
             overflow-y: auto;
@@ -194,7 +198,6 @@
         .tx-meta span { font-size: 11px; color: var(--text-muted); }
         .bank-icon { width: 15px; height: 15px; border-radius: 50%; }
 
-        /* NEW TAB BAR SYSTEM */
         .tab-bar {
             position: absolute;
             bottom: 0;
@@ -230,7 +233,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: -35px; /* Offset to float above */
+            margin-top: -35px;
             box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
             flex-shrink: 0;
         }
@@ -303,7 +306,7 @@
                 <div class="tx-val">₹1,299</div>
                 <div class="tx-meta">
                     <span>Debited from</span>
-                    <img src="https://drive.google.com/file/d/1_pZPL-WXXkxtRI4gTtN0B39FtKw1deiX/view?usp=sharing" class="bank-icon">
+                    <div style="width:15px; height:15px; background:blue; border-radius:50%"></div>
                 </div>
             </div>
         </div>
@@ -321,90 +324,8 @@
                 <div class="tx-val" style="color: var(--success-green)">+ ₹50,000</div>
             </div>
         </div>
-
-        <div class="tx-row">
-            <div class="tx-icon-bg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </div>
-            <div class="tx-main">
-                <div class="tx-type">Paid to</div>
-                <div class="tx-title">ADANI GAS LIMITED</div>
-                <div class="tx-time">7 hours ago</div>
-            </div>
-            <div class="tx-right">
-                <div class="tx-val">₹783.42</div>
-                <div class="tx-meta">
-                    <span>Debited from</span>
-                    <img src="https://play.google.com/store/apps/details?id=com.indusindbank.IndusDirect" class="bank-icon">
-                </div>
-            </div>
-        </div>
-
-        <div class="tx-row">
-            <div class="tx-icon-bg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="17" y1="7" x2="7" y2="17"></line><polyline points="17 17 7 17 7 7"></polyline></svg>
-            </div>
-            <div class="tx-main">
-                <div class="tx-type">Received from</div>
-                <div class="tx-title">RAGHU</div>
-                <div class="tx-time">Yesterday</div>
-            </div>
-            <div class="tx-right">
-                <div class="tx-val" style="color: var(--success-green)">+ ₹50,000</div>
-            </div>
-        </div>
-
-        <div class="tx-row">
-            <div class="tx-icon-bg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </div>
-            <div class="tx-main">
-                <div class="tx-type">Payment to</div>
-                <div class="tx-title">ADITYA BIRLA INC</div>
-                <div class="tx-time">7 hours ago</div>
-            </div>
-            <div class="tx-right">
-                <div class="tx-val">₹22,999</div>
-                <div class="tx-meta">
-                    <span style="color: var(--error-red)">Failed</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#ff5252"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12" stroke="white" stroke-width="2"></line><line x1="12" y1="16" x2="12.01" y2="16" stroke="white" stroke-width="2"></line></svg>
-                </div>
-            </div>
-        </div>
-
-        <div class="tx-row">
-            <div class="tx-icon-bg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </div>
-            <div class="tx-main">
-                <div class="tx-type">Paid to</div>
-                <div class="tx-title">ROHAN MARUTI</div>
-                <div class="tx-time">7 hours ago</div>
-            </div>
-            <div class="tx-right">
-                <div class="tx-val">₹11,514.91</div>
-                <div class="tx-meta">
-                    <span>Debited from</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bank_of_Baroda_logo.svg/1200px-Bank_of_Baroda_logo.svg.png" class="bank-icon">
-                </div>
-            </div>
-        </div>
-
-        <div class="tx-row">
-            <div class="tx-icon-bg">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="17" y1="7" x2="7" y2="17"></line><polyline points="17 17 7 17 7 7"></polyline></svg>
-            </div>
-            <div class="tx-main">
-                <div class="tx-type">Received from</div>
-                <div class="tx-title">ABISHEK NAMDEV</div>
-                <div class="tx-time">Yesterday</div>
-            </div>
-            <div class="tx-right">
-                <div class="tx-val" style="color: var(--success-green)">+ ₹500</div>
-            </div>
-        </div>
         
-        <div style="height: -25vh;"></div>
+        <div style="height: 50vh;"></div>
     </div>
 
     <div class="tab-bar">
@@ -432,6 +353,16 @@
 </div>
 
 <script>
+    // 1. REGISTER SERVICE WORKER
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker Registered'))
+            .catch(err => console.log('Service Worker Failed', err));
+        });
+    }
+
+    // 2. YOUR ORIGINAL SCROLL LOGIC
     const scrollBody = document.getElementById('scrollBody');
     const histText = document.getElementById('histText');
     const stmtPill = document.getElementById('stmtPill');
@@ -439,7 +370,6 @@
 
     scrollBody.addEventListener('scroll', () => {
         const y = scrollBody.scrollTop;
-
         if (y > 15) {
             histText.classList.add('scrolled');
             stmtPill.style.opacity = '0';
@@ -453,6 +383,5 @@
         }
     });
 </script>
-
 </body>
 </html>
